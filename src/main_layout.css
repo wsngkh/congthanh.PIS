@@ -1,0 +1,118 @@
+.layout {
+  width: 100%;
+  display: grid;
+  grid:
+    "header" 100vh
+    "main" auto
+    "footer" 360px
+    / 100%;
+  gap: 8px;
+}
+.gapgap {
+  height: 32px;
+  width: 100%;
+}
+
+#ctn-header {
+  grid-area: header; 
+  background-color: var(--color-primary-1);
+}
+#ctn-nav {
+  display: flex;
+}
+#ctn-hero {
+  display: flex;
+}
+.ctn-about {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ctn-about-content {
+  flex-grow: 1;      /* căn dọc */
+  min-height: 200px;         /* hoặc chiều cao phù hợp */
+}
+.ctn-about-content img {
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  max-height: 100%;          /* ảnh co theo container */
+  object-fit: contain;       /* giữ tỉ lệ ảnh */
+}
+
+#ctn-main { 
+  grid-area: main; 
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-sizing: border-box;
+  gap: 10px; /* 👈 khoảng cách giữa các box */
+}
+
+
+#ctn-main-content{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#ctn-contact {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.grow1 { flex-grow: 1; }
+
+#ctn-footer { 
+  grid-area: footer;
+  background-color: coral;
+}
+
+
+
+
+.box {
+  min-height: 250px;
+  height: auto;
+  width: calc(33.33333% - 10px);
+  flex-basis: calc(33.33% - 10px);
+  margin: 0 5px 10px;
+  box-sizing: border-box;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.box.box-bg {
+  background-color: rgba(17, 56, 91, .1);
+}
+
+@media screen and (max-width: 1024px) {
+    .layout {
+      grid:
+        "header" 70vh
+        "main" auto
+        "footer" 360px
+        / 100%;
+    }
+    #ctn-main .box {
+        width: calc(50% - 10px);
+        flex-basis: calc(50% - 10px);
+    }
+}
+@media screen and (max-width: 640px) {
+    #ctn-main .box{
+        width: 100%;
+        flex-basis: 100%;
+    }
+}

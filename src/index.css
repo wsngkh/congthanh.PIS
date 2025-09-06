@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary-1: #1F3C4E;
+  --color-primary-2: #75a5a5;
+  --color-primary-3: #fbe8bb;
+  --color-primary-4: #b52733;
+  --color-primary-5: #e4453f;
+  --color-primary-6: #fca876;
+  --color-primary-7: #acc29b;
+}
+
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: white;
+}
+html {
+  font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+html, body {
+  -ms-overflow-style: none;  /* IE và Edge */
+  scrollbar-width: none;     /* Firefox */
+
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
